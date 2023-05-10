@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "791019185506",
+    "project_id": "babillard-app-af8fb",
+    "storage_bucket": "babillard-app-af8fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791019185506:android:5626b9ba2cb33010c4783b",
+        "android_client_info": {
+          "package_name": "com.example.myproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791019185506-sctms8netk89nhuul6t9t0fe5l5punff.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myproject",
+            "certificate_hash": "b9e7acd8a6cee301a810fbcba26336215ea15c39"
+          }
+        },
+        {
+          "client_id": "791019185506-iuqguqnbf1jd2gareh3mifcf8h2b58bc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_vNm-fxLEzrgWkzq_Wsk6Fj8M9VYY0Ek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791019185506-iuqguqnbf1jd2gareh3mifcf8h2b58bc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
