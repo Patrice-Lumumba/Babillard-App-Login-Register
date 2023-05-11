@@ -30,8 +30,8 @@ fun SignUpScreen() {
             modifier = Modifier.padding(16.dp)
         ) {
             Image(
-                painter = painterResource(id = R.drawable.school_24),
-                modifier = Modifier.width(500.dp),
+                painter = painterResource(id = R.drawable.iuc),
+                modifier = Modifier.width(200.dp),
                 contentDescription = null,
 
                 )

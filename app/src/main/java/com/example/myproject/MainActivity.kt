@@ -3,6 +3,7 @@ package com.example.myproject
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
@@ -20,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusDirection
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
@@ -41,6 +43,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.InternalCoroutinesApi
 
 class MainActivity : ComponentActivity() {
+
 
     companion object{
         val TAB: String = MainActivity::class.java.simpleName
@@ -91,6 +94,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun LoginScreen(auth: FirebaseAuth) {
 
+    val context = LocalContext.current
+
     val focusManager = LocalFocusManager.current
 
     var email by remember {
@@ -129,7 +134,7 @@ fun LoginScreen(auth: FirebaseAuth) {
         )
 
         Image(
-            painter = painterResource(id = R.drawable.school_24),
+            painter = painterResource(id = R.drawable.iuc),
             contentDescription = "Logo",
             modifier = Modifier.size(150.dp)
         )
@@ -203,9 +208,11 @@ fun LoginScreen(auth: FirebaseAuth) {
                         auth.signInWithEmailAndPassword(email, password)
                             .addOnCompleteListener{
                                 if (it.isSuccessful){
-                                    Log.d(TAB, "The user was successfull logged in")
+                                    Toast.makeText(context, "Vous avez été connecté avec succès", Toast.LENGTH_SHORT).show()
+                                    Log.d(TAB, "Vous avez été connecté avec succès")
                                 }else{
-                                    Log.w(TAB, "The user has failed to log in", it.exception)
+                                    Toast.makeText(context, "Email ou mot de passe incorrect", Toast.LENGTH_SHORT).show()
+                                    Log.d(TAB, "Email ou mot de passe incorrect")
                                 }
                             }
                         },
@@ -231,8 +238,6 @@ fun LoginScreen(auth: FirebaseAuth) {
         }
     }
 }
-
-
 
 
 
