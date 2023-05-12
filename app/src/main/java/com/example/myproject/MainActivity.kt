@@ -33,6 +33,8 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.babillard.ecoles.MyBox
+import com.example.babillard.ecoles.filieres3IAC.MyBox1
 import com.example.myproject.MainActivity.Companion.TAB
 import com.example.myproject.ui.theme.MyProjectTheme
 import com.google.firebase.auth.FirebaseAuth
@@ -56,12 +58,58 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyProjectTheme {
-                /*val navController = rememberNavController()
-                NavHost(navController = navController, startDestination = "Log in", builder = {
+                val navController = rememberNavController()
+
+
+                NavHost(navController = navController, startDestination = "screen", builder = {
+
+                    ///////// Nav 1
+                    composable("screen"){
+                        Screen(navController = navController)
+                    }
+                    //////// Nav 2
+                    composable("MyBox"){
+                        MyBox(navController = navController)
+                    }
+                    /////// Nav 3
+                    composable("login"){
+                        MyBox1(navController = navController)
+                    }
+                    //////// Nav 4
                     composable("login"){
                         Login(navController = navController)
                     }
-                })*/
+                    /*
+                    ////// Nav 5
+                    composable("login"){
+                        MyBox2(navController = navController)
+                    }
+                    */
+
+
+                    /*
+                    ////// Nav 6
+                    composable("login"){
+                        Login(navController = navController)
+                    }
+                    ////// Nav 7
+                    composable("login"){
+                        Login(navController = navController)
+                    }
+                    ////// Nav 8
+                    composable("login"){
+                        Login(navController = navController)
+                    }
+                    ////// Nav 9
+                    composable("login"){
+                        Login(navController = navController)
+                    }
+                    ////// Nav 10
+                    composable("login"){
+                        Login(navController = navController)
+                    }
+                    */
+                })
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
